@@ -1,0 +1,9 @@
+services:
+  ai-news:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai-news-site
+    ports:
+      - "8080:80"
+    restart: unless-stopped
