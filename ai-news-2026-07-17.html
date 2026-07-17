@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>今日 AI 新闻 - 2026-07-17</title>
+    <style>
+      :root {
+        --bg: #f4efe6;
+        --ink: #1f2937;
+        --muted: #5b6472;
+        --line: rgba(31, 41, 55, 0.14);
+        --panel: rgba(255, 252, 247, 0.9);
+        --accent: #b63f2c;
+        --accent-soft: #efe0d3;
+        --shadow: 0 24px 60px rgba(77, 55, 32, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(182, 63, 44, 0.16), transparent 28%),
+          linear-gradient(180deg, #efe5d6 0%, var(--bg) 48%, #f7f2eb 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        width: min(1040px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 48px 0 72px;
+      }
+
+      .masthead {
+        padding: 28px 0 36px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .kicker {
+        margin: 0 0 12px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(40px, 6vw, 74px);
+        line-height: 0.95;
+        font-weight: 700;
+        max-width: 9ch;
+      }
+
+      .deck {
+        max-width: 720px;
+        margin: 20px 0 0;
+        font-size: 20px;
+        line-height: 1.65;
+        color: var(--muted);
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+        margin-top: 24px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.8fr) minmax(280px, 0.9fr);
+        gap: 28px;
+        margin-top: 36px;
+      }
+
+      .lead,
+      .notes,
+      .story {
+        background: var(--panel);
+        backdrop-filter: blur(8px);
+        box-shadow: var(--shadow);
+      }
+
+      .lead,
+      .notes {
+        padding: 24px;
+      }
+
+      .lead {
+        border-top: 4px solid var(--accent);
+      }
+
+      .section-title {
+        margin: 0 0 16px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .lead h2 {
+        margin: 0 0 12px;
+        font-size: 32px;
+        line-height: 1.15;
+      }
+
+      .lead p,
+      .notes li,
+      .story p {
+        font-size: 18px;
+        line-height: 1.7;
+        color: var(--ink);
+      }
+
+      .lead p:last-child,
+      .story p:last-child {
+        margin-bottom: 0;
+      }
+
+      .notes ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .notes li + li {
+        margin-top: 12px;
+      }
+
+      .stories {
+        display: grid;
+        gap: 18px;
+        margin-top: 28px;
+      }
+
+      .story {
+        padding: 22px;
+        border: 1px solid var(--line);
+      }
+
+      .story h3 {
+        margin: 0 0 10px;
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      .story-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        margin-bottom: 10px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 4px 8px;
+        border-radius: 999px;
+        background: var(--accent-soft);
+        color: var(--accent);
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+      }
+
+      .source-link {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid currentColor;
+      }
+
+      .footer {
+        margin-top: 32px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      @media (max-width: 880px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          max-width: none;
+        }
+
+        .deck,
+        .lead p,
+        .notes li,
+        .story p {
+          font-size: 17px;
+        }
+
+        .story h3 {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="masthead">
+        <p class="kicker">AI Daily Brief</p>
+        <h1>今日 AI 新闻</h1>
+        <p class="deck">
+          2026 年 7 月 17 日整理。基于今天可访问的 TechCrunch、VentureBeat 与 AI News
+          公开 RSS，挑出近 24 小时最值得看的 8 条 AI 动态，并补上一段简短判断，方便快速扫读。
+        </p>
+        <div class="meta">
+          <span>生成时间：2026-07-17 17:32 CST</span>
+          <span>来源：TechCrunch / VentureBeat / AI News</span>
+          <span>筛选范围：近 24 小时可核实 AI 新闻</span>
+        </div>
+      </header>
+
+      <section class="grid">
+        <article class="lead">
+          <p class="section-title">今日主线</p>
+          <h2>AI 正在更快地接管工作流、预算和高风险领域，而不只是生成文本</h2>
+          <p>
+            今天这批新闻放在一起看，主线非常清楚：一边是 Google、DoorDash、Roblox
+            继续把 AI 推进真实任务入口，让模型开始操作应用、下单、做内容；另一边是企业和政府开始更认真地面对基础设施成本、安全事故和生物风险。
+          </p>
+          <p>
+            换句话说，行业焦点正在从“模型会不会更聪明”转向“模型接入系统之后，谁来付钱、谁来控权、谁来承担后果”。这也是今天最值得追的一条大线。
+          </p>
+        </article>
+
+        <aside class="notes">
+          <p class="section-title">快速观察</p>
+          <ul>
+            <li>Google 今天依旧最强势，覆盖视频生产、搜索入口和 DeepMind 生物安全三个方向。</li>
+            <li>Agent 化开始落到具体接口层，DoorDash 的 `dd-cli` 很像给 AI 开了一个原生下单口。</li>
+            <li>企业侧的担忧也更具象了：算力成本看不清、凭据共享、Agent 安全事故都已经不是抽象风险。</li>
+            <li>医疗和生物相关应用继续升温，但伴随而来的监管和误用问题也一起抬头。</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="stories">
+        <article class="story">
+          <div class="story-meta"><span>TechCrunch</span><span>2026-07-16</span></div>
+          <h3>Google Vids 开始支持“由你本人出演”的 AI 视频</h3>
+          <p><span class="tag">产品化</span></p>
+          <p>
+            Google 在 Vids 中加入个性化 AI 头像，以及 Gemini Omni 驱动的视频生成与编辑能力。它代表的不是单纯的视频提效，而是把“出镜、脚本、制作”三件事压缩进同一个 AI 工作流里。
+          </p>
+          <p><a class="source-link" href="https://techcrunch.com/2026/07/16/google-vids-now-lets-you-star-in-your-own-ai-videos/">查看原文</a></p>
+        </article>
+
+        <article class="story">
+          <div class="story-meta"><span>TechCrunch</span><span>2026-07-16</span></div>
+          <h3>Google 的 AI Mode 开始接入并操作部分应用</h3>
+          <p><span class="tag">Agent</span></p>
+          <p>
+            这次更新把 AI Mode 从回答问题推进到跨应用执行任务。搜索框一旦能调动真实应用，竞争重点就会从“答案质量”转向“谁能完成更多具体动作”。
+          </p>
+          <p><a class="source-link" href="https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/">查看原文</a></p>
+        </article>
+
+        <article class="story">
+          <div class="story-meta"><span>TechCrunch</span><span>2026-07-16</span></div>
+          <h3>DoorDash 开放命令行下单测试，AI Agent 可以直接叫外卖</h3>
+          <p><span class="tag">接口化</span></p>
+          <p>
+            DoorDash 推出 `dd-cli` 限量测试，允许开发者和 AI agent 在终端里搜店、建购物车和下单。这类接口的意义很直接：以后很多产品的“第一用户”可能不是人，而是代理软件。
+          </p>
+          <p><a class="source-link" href="https://techcrunch.com/2026/07/16/yes-you-can-now-order-doordash-from-the-command-line/">查看原文</a></p>
+        </article>
+
+        <article class="story">
+          <div class="story-meta"><span>TechCrunch</span><span>2026-07-16</span></div>
+          <h3>Roblox 在移动端加入 AI 游戏生成功能</h3>
+          <p><span class="tag">创作工具</span></p>
+          <p>
+            Roblox 的新功能允许用户用一句提示词生成基础游戏。对于 UGC 平台来说，这意味着创作门槛继续下降，平台的核心问题会更快转成内容质量、审核和分发机制。
+          </p>
+          <p><a class="source-link" href="https://techcrunch.com/2026/07/16/roblox-launches-an-ai-powered-game-creation-feature-in-its-mobile-app/">查看原文</a></p>
+        </article>
+
+        <article class="story">
+          <div class="story-meta"><span>VentureBeat</span><span>2026-07-16</span></div>
+          <h3>企业 AI 算力投入正在快过成本测量能力</h3>
+          <p><span class="tag">基础设施</span></p>
+          <p>
+            VentureBeat 的企业调研指出，大多数公司已经在追加 AI 基础设施预算，但对 GPU 利用率和真实计算成本仍缺乏清晰度。这个信号很关键，说明 2026 年很多 AI 投入更像“先买再算账”。
+          </p>
+          <p><a class="source-link" href="https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs">查看原文</a></p>
+        </article>
+
+        <article class="story">
+          <div class="story-meta"><span>VentureBeat</span><span>2026-07-16</span></div>
+          <h3>超半数企业已经出现过 AI Agent 安全事故或险情</h3>
+          <p><span class="tag">安全</span></p>
+          <p>
+            同一轮调研里，54% 的企业称已经遇到过 agent 安全事件或接近出事，而多数 agent 仍在共享凭据。行业现在显然不是缺 agent，而是缺一套配得上 agent 的身份、隔离和授权体系。
+          </p>
+          <p><a class="source-link" href="https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials">查看原文</a></p>
+        </article>
+
+        <article class="story">
+          <div class="story-meta"><span>AI News</span><span>2026-07-16</span></div>
+          <h3>Google DeepMind 公布 AI 生物韧性推进计划</h3>
+          <p><span class="tag">生物安全</span></p>
+          <p>
+            DeepMind 与 Isomorphic Labs 披露了围绕生物误用防范、疫情检测和响应的合作计划，涉及十多个政府与研究伙伴。它提醒人们，前沿模型进入生物领域之后，收益和风险都在同步放大。
+          </p>
+          <p><a class="source-link" href="https://www.artificialintelligence-news.com/news/examining-google-deepmind-ai-bioresilience-push/">查看原文</a></p>
+        </article>
+
+        <article class="story">
+          <div class="story-meta"><span>AI News</span><span>2026-07-16</span></div>
+          <h3>Neko Health 融资 7 亿美元，继续扩张 AI 体检业务</h3>
+          <p><span class="tag">医疗</span></p>
+          <p>
+            Neko Health 宣布 7 亿美元融资，准备把 AI 体检服务进一步推向美国市场。医疗 AI 的落地逻辑越来越像线下服务业：模型只是底层能力，真正的壁垒在设备、流程、医生协同和合规交付。
+          </p>
+          <p><a class="source-link" href="https://www.artificialintelligence-news.com/news/neko-health-700m-ai-body-scans-us/">查看原文</a></p>
+        </article>
+      </section>
+
+      <footer class="footer">
+        本页为手工筛选整理版，未使用 agent-reach。新闻条目均来自今天可访问的公开 RSS / 文章链接；如需，我可以继续补成“双语版”、增加“国内 AI 新闻”分栏，或追加可点击的来源摘要区。
+      </footer>
+    </main>
+  </body>
+</html>
